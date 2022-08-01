@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="322980956511a16ef7a570c506b8cdd16405c3435a6a15337188f7f58164b3e1.html">Realizar Creacion De Usuario En La Pagina Utest.Com</a></span>
+                > <span class="truncate-60"><a
+                    href="f45beb0b7d5d44111b435ee1070dfb3744fc7e88ac5d43874edd93725f2c76e1.html">Crear usuario desde el join today </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 31-07-2022 23:07</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Realizar Creacion De Usuario En La Pagina Utest.Com </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="3b647098d7d1f98c7fead3c38dba094af5c9c8af4ab37b7b04de7da636c6d139.html">Escenario1
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Crear usuario desde el join today
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="79c0a48df904e40e771cf84b60574f285a741c88255ac13321c0121e292f6112.png" title=" Dado Que el usuario acceda hasta la web para crear usuarios" width="1034"/>
+                <img src="79c0a48df904e40e771cf84b60574f285a741c88255ac13321c0121e292f6112.png" title=" Global opens the Home page" width="1034"/>
+                <img src="79c0a48df904e40e771cf84b60574f285a741c88255ac13321c0121e292f6112.png" title=" Dado Que el usuario acceda hasta la web para crear usuarios (completed)" width="1034"/>
+                <img src="429a6bc1ca7eab3f1efb29e7f9fc669d8351faf3cff3fab924054b93dc262ff5.png" title=" Cuando el agrega nombre Cristian apellido Torres correo Cristian@gmail.com mes April dia 7 anio 1994 en el formulario" width="1034"/>
+                <img src="429a6bc1ca7eab3f1efb29e7f9fc669d8351faf3cff3fab924054b93dc262ff5.png" title=" Global llenar primer formulario" width="1034"/>
+                <img src="429a6bc1ca7eab3f1efb29e7f9fc669d8351faf3cff3fab924054b93dc262ff5.png" title=" Global clicks on Boton join today" width="1034"/>
+                <img src="429a6bc1ca7eab3f1efb29e7f9fc669d8351faf3cff3fab924054b93dc262ff5.png" title=" Global enters 'Cristian' into Input nombre" width="1034"/>
+                <img src="8f1df5cd454bbf4c5585dd7743043723829c414b0d8a52a501a45235419fa590.png" title=" Global enters 'Cristian' into Input nombre (completed)" width="1034"/>
+                <img src="8f1df5cd454bbf4c5585dd7743043723829c414b0d8a52a501a45235419fa590.png" title=" Global enters 'Torres' into Input apellido" width="1034"/>
+                <img src="dc71a81e26f4e6f0e4ace393bdfd0e1a2260678056acfbd4111890b84bec6bd5.png" title=" Global enters 'Torres' into Input apellido (completed)" width="1034"/>
+                <img src="dc71a81e26f4e6f0e4ace393bdfd0e1a2260678056acfbd4111890b84bec6bd5.png" title=" Global enters 'Cristian@gmail.com' into Input correo" width="1034"/>
+                <img src="5a182901b27a9344085e1f85ee12b6f2642eaa593d17be6c72016117ba1fae86.png" title=" Global enters 'Cristian@gmail.com' into Input correo (completed)" width="1034"/>
+                <img src="5a182901b27a9344085e1f85ee12b6f2642eaa593d17be6c72016117ba1fae86.png" title=" Global select April on Select mes" width="1034"/>
+                <img src="fa37b75f791b1ed575f8e048ed3e0c7190e4f573b53046e77edd11a8659b2c07.png" title=" Global select April on Select mes (completed)" width="1034"/>
+                <img src="fa37b75f791b1ed575f8e048ed3e0c7190e4f573b53046e77edd11a8659b2c07.png" title=" Global select 7 on Select dia" width="1034"/>
+                <img src="0c750e0f452194623ca9ff638c8634303f8e4b0fe36c2d9116066eaea58af9c3.png" title=" Global select 7 on Select dia (completed)" width="1034"/>
+                <img src="0c750e0f452194623ca9ff638c8634303f8e4b0fe36c2d9116066eaea58af9c3.png" title=" Global select 1994 on Select anio" width="1034"/>
+                <img src="f251c2342d5c2141a62fcc2423847bf602b31126b8ece6a353328cfa0ba9917c.png" title=" Global select 1994 on Select anio (completed)" width="1034"/>
+                <img src="f251c2342d5c2141a62fcc2423847bf602b31126b8ece6a353328cfa0ba9917c.png" title=" Global clicks on Boton segundo formulario" width="1034"/>
+                <img src="27ca36e8d9e21e43accf3b20366a0d565d99cc11b1d2647cd953a5f69574ef9f.png" title=" Global clicks on Boton segundo formulario (completed)" width="1034"/>
+                <img src="27ca36e8d9e21e43accf3b20366a0d565d99cc11b1d2647cd953a5f69574ef9f.png" title=" Global llenar primer formulario (completed)" width="1034"/>
+                <img src="27ca36e8d9e21e43accf3b20366a0d565d99cc11b1d2647cd953a5f69574ef9f.png" title=" Cuando el agrega nombre Cristian apellido Torres correo Cristian@gmail.com mes April dia 7 anio 1994 en el formulario (completed)" width="1034"/>
+                <img src="608ddeac36f8fa2c4d3275ead8221257af71496e96de3158a7c4caaabd30d5ef.png" title=" Cuando el agrega ciudad codigo postal 111911 pais Colombia en el formulario" width="1034"/>
+                <img src="608ddeac36f8fa2c4d3275ead8221257af71496e96de3158a7c4caaabd30d5ef.png" title=" Global llenar segundo formulario" width="1034"/>
+                <img src="608ddeac36f8fa2c4d3275ead8221257af71496e96de3158a7c4caaabd30d5ef.png" title=" Global enters '111911' into Input apellido" width="1034"/>
+                <img src="df318bad44dd6e14807276195d1d83d2b7a5d67d208fd0beaffb09b6db3dda4b.png" title=" Global enters '111911' into Input apellido (completed)" width="1034"/>
+                <img src="df318bad44dd6e14807276195d1d83d2b7a5d67d208fd0beaffb09b6db3dda4b.png" title=" Global types 'ENTER' in Input correo" width="1034"/>
+                <img src="b83e6e5e442f63e1bf88e40f1483a5cfdab86b8a276cc9444808a360757a556c.png" title=" Global types 'ENTER' in Input correo (completed)" width="1034"/>
+                <img src="b83e6e5e442f63e1bf88e40f1483a5cfdab86b8a276cc9444808a360757a556c.png" title=" Global clicks on Boton segundo formulario" width="1034"/>
+                <img src="0a82184c4234d10c8e5d6810208cd9150f0a804eb6d4144c79c36d62f6c9cf51.png" title=" Global clicks on Boton segundo formulario (completed)" width="1034"/>
+                <img src="0a82184c4234d10c8e5d6810208cd9150f0a804eb6d4144c79c36d62f6c9cf51.png" title=" Global llenar segundo formulario (completed)" width="1034"/>
+                <img src="0a82184c4234d10c8e5d6810208cd9150f0a804eb6d4144c79c36d62f6c9cf51.png" title=" Cuando el agrega ciudad codigo postal 111911 pais Colombia en el formulario (completed)" width="1034"/>
+                <img src="212e2da1ec5876f0b0c91d3896ef9692ac25a990b8a20f30a3a7c7705f8acdae.png" title=" Cuando el agrega computadora Windows version Windows 10 Home lenguaje Spanish movil Xiaomi modelo Redmi Note 9 Pro sistema Android 11 en el formulario" width="1034"/>
+                <img src="212e2da1ec5876f0b0c91d3896ef9692ac25a990b8a20f30a3a7c7705f8acdae.png" title=" Global llenar tercer formulario" width="1034"/>
+                <img src="212e2da1ec5876f0b0c91d3896ef9692ac25a990b8a20f30a3a7c7705f8acdae.png" title=" Global types 'ENTER' in Span computadora" width="1034"/>
+                <img src="afd8943848c1be89a1f85d67956b66af7135e7df2a3c7edc4f03f5e26e54bae2.png" title=" Global types 'ENTER' in Span computadora (completed)" width="1034"/>
+                <img src="afd8943848c1be89a1f85d67956b66af7135e7df2a3c7edc4f03f5e26e54bae2.png" title=" Global types 'ENTER' in Span verson" width="1034"/>
+                <img src="f8f4c70f1957699a5658cd17dcdc3198115d4436bd8d1326b1fa121b11c62457.png" title=" Global types 'ENTER' in Span verson (completed)" width="1034"/>
+                <img src="f8f4c70f1957699a5658cd17dcdc3198115d4436bd8d1326b1fa121b11c62457.png" title=" Global types 'ENTER' in Span lenguaje" width="1034"/>
+                <img src="335fa0e5c78f96832ebf0fe69e20041581041847aeb34366d00ceeb57c1bdd58.png" title=" Global types 'ENTER' in Span lenguaje (completed)" width="1034"/>
+                <img src="335fa0e5c78f96832ebf0fe69e20041581041847aeb34366d00ceeb57c1bdd58.png" title=" Global types 'ENTER' in Span movil" width="1034"/>
+                <img src="596de386b1fa9025b34c99b501dbcf8fd41341d1ee3e943f7d3795a10316076f.png" title=" Global types 'ENTER' in Span movil (completed)" width="1034"/>
+                <img src="596de386b1fa9025b34c99b501dbcf8fd41341d1ee3e943f7d3795a10316076f.png" title=" Global types 'ENTER' in Span modelo" width="1034"/>
+                <img src="5f1ad7ec375eef6f5c501eff179f842c68d5b30a07dde34be37ed29ed15faf66.png" title=" Global types 'ENTER' in Span modelo (completed)" width="1034"/>
+                <img src="5f1ad7ec375eef6f5c501eff179f842c68d5b30a07dde34be37ed29ed15faf66.png" title=" Global types 'ENTER' in span sistema" width="1034"/>
+                <img src="40f61a64442fda23f4e2a50f980e61a0f43c5a54c7de3857144a4c39d722af2f.png" title=" Global types 'ENTER' in span sistema (completed)" width="1034"/>
+                <img src="40f61a64442fda23f4e2a50f980e61a0f43c5a54c7de3857144a4c39d722af2f.png" title=" Global clicks on Boton segundo formulario" width="1034"/>
+                <img src="d79dcfc1e24e57eecb71101c927c2ef425ede0c2e5d9c5854b52422a63585556.png" title=" Global clicks on Boton segundo formulario (completed)" width="1034"/>
+                <img src="d79dcfc1e24e57eecb71101c927c2ef425ede0c2e5d9c5854b52422a63585556.png" title=" Global llenar tercer formulario (completed)" width="1034"/>
+                <img src="d79dcfc1e24e57eecb71101c927c2ef425ede0c2e5d9c5854b52422a63585556.png" title=" Cuando el agrega computadora Windows version Windows 10 Home lenguaje Spanish movil Xiaomi modelo Redmi Note 9 Pro sistema Android 11 en el formulario (completed)" width="1034"/>
+                <img src="6825aa29b3e1c992ac7758fb355b418e27a885c9f8a7e688ada9c5f1c1592a6a.png" title=" Entonces Va contra qwertyuiop1234567890 confirma qwertyuiop1234567890 completa el utlimo formulario" width="1034"/>
+                <img src="6825aa29b3e1c992ac7758fb355b418e27a885c9f8a7e688ada9c5f1c1592a6a.png" title=" Global llenar ultimo formulario" width="1034"/>
+                <img src="1ffd4e8c4749fc4c2adee1e04cad278199f82ee095a8585932eafd1603ed4818.png" title=" Global enters 'qwertyuiop1234567890' into Contrasena" width="1034"/>
+                <img src="ca5a82097e1a50f17a2598a293a60e8359a720c9eafda7e255b0208e5122c261.png" title=" Global enters 'qwertyuiop1234567890' into Contrasena (completed)" width="1034"/>
+                <img src="ca5a82097e1a50f17a2598a293a60e8359a720c9eafda7e255b0208e5122c261.png" title=" Global enters 'qwertyuiop1234567890' into Confirmar contrasena" width="1034"/>
+                <img src="df928fb23dfaa406af6731032446054898583c773529ee4838f28e66b804dc2f.png" title=" Global enters 'qwertyuiop1234567890' into Confirmar contrasena (completed)" width="1034"/>
+                <img src="df928fb23dfaa406af6731032446054898583c773529ee4838f28e66b804dc2f.png" title=" Global clicks on option1" width="1034"/>
+                <img src="a6d2119d9e4badd5a027596952395a79617a3951a4f45582f37836e8371e4e86.png" title=" Global clicks on option1 (completed)" width="1034"/>
+                <img src="a6d2119d9e4badd5a027596952395a79617a3951a4f45582f37836e8371e4e86.png" title=" Global clicks on option2" width="1034"/>
+                <img src="cb6e7e0936200f119eb0127e4404778aee94158c27ca35ee103166bb31697648.png" title=" Global clicks on option2 (completed)" width="1034"/>
+                <img src="cb6e7e0936200f119eb0127e4404778aee94158c27ca35ee103166bb31697648.png" title=" Global clicks on option3" width="1034"/>
+                <img src="ac3e9c7aad4355dd11b60a6eb9fb6b88f5be2a399685fc194acd5c7ec9d1a09c.png" title=" Global clicks on option3 (completed)" width="1034"/>
+                <img src="ac3e9c7aad4355dd11b60a6eb9fb6b88f5be2a399685fc194acd5c7ec9d1a09c.png" title=" Global clicks on Boton completar" width="1034"/>
+                <img src="f0a51efd1ac26f7012b5e12d1baafee8871c91a25ff56094b2cdee89f3baf241.png" title=" Global clicks on Boton completar (completed)" width="1034"/>
+                <img src="f0a51efd1ac26f7012b5e12d1baafee8871c91a25ff56094b2cdee89f3baf241.png" title=" Global llenar ultimo formulario (completed)" width="1034"/>
+                <img src="f0a51efd1ac26f7012b5e12d1baafee8871c91a25ff56094b2cdee89f3baf241.png" title=" Entonces Va contra qwertyuiop1234567890 confirma qwertyuiop1234567890 completa el utlimo formulario (completed): <span class='success-color'>SUCCESS</span>" width="1034"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.4</span>
+</div>
+</body>
+</html>
